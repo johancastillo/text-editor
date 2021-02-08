@@ -9,8 +9,9 @@ try{
     
     // Guardar en la base de datos
     $statement = $connect->prepare("INSERT INTO posts (content) VALUES (:content)");
-    $statement->execute(["content" => "<p><b>Test Two</b></p>"]);    
+    $statement->execute(["content" => "<p><b>Test Tree</b></p>"]);    
     
+    return "<h1>Saved</h1>";
     
 }catch(PDOException $e){
     echo "ERROR: " . $e->getMessage();
@@ -18,5 +19,3 @@ try{
 
 
 ?>
-
-<h1>Saved</h1>
